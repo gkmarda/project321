@@ -1,4 +1,5 @@
 pipeline {
+agent any
     
     stages{
         stage("Bygga Design project and Install") {
