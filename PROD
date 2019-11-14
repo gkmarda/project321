@@ -1,0 +1,42 @@
+pipeline {
+    
+    stages{
+        stage("Bygga Design project and Install") {
+            steps {
+                container('front-end-base'){
+		       echo "Prepare code analysis"
+
+                }
+            }
+        }
+	
+	   stage('Code Analysis') {
+            steps {
+                container('front-end-base') {
+
+		       echo "Static code analysis"
+                }
+            }
+        }
+
+        stage('Build') {
+            steps {
+
+                container('front-end-base') {
+
+		echo "Build the code"
+                }
+            }
+        }
+	
+        stage("Delivery") {
+            steps {
+                container('front-end-base'){
+
+                    echo "Make delivery to CDN and Auth0 Tenant"
+                }
+            }
+        }
+    }
+    
+}
