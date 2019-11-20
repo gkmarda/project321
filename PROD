@@ -4,7 +4,7 @@ agent any
     stages{
         stage("Bygga Design project and Install") {
             steps {
-		       echo "Prepare code analysis"
+		       echo "Prepare code analysis..."
             }
      }
 	
